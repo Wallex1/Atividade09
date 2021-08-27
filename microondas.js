@@ -1,39 +1,53 @@
 //definindo padrão do tempo pelas variaveis
-let prato = "pipoca"
-let tempoCliente = 19
+let prato = "carne"
+let tempoCliente = 20
 let tempoPrato = 0
 let tempoUsado = 0
 
 //Checando o prato do cliente
-if (prato != "pipoca" && "carne" && "feijão" && "brigadeiro" && "macarrão"){
-        console.log("Prato inexistente!")
+switch (prato) {
+        case "carne":
+        break;
+
+        case "feijao":
+        break;
+
+        case "brigadeiro":
+        break;
+
+        case "pipoca":
+        break;
+
+        case "macarrão":
+        break;
+
+        default:
+                console.log("Prato inexistente!")
 
 }
 
 //Definindo o tempo padrão de cada prato e qual tempo usar
-if(prato == "pipoca"){
-        tempoPrato = 10
+if (prato == "carne" || "feijao" || "macarrão" || "pipoca" || "brigadeiro"){
         tempoUsado = tempoPrato
+
+}if(prato == "pipoca"){
+        tempoPrato = 10
         console.log("Prato pronto, bom apetite!!!")
 
 }if(prato == "macarrão"){
         tempoPrato = 8
-        tempoUsado = tempoPrato
         console.log("Prato pronto, bom apetite!!!")
 
 }if(prato == "carne"){
         tempoPrato = 15
-        tempoUsado = tempoPrato
         console.log("Prato pronto, bom apetite!!!")
 
-}if(prato == "feijão"){
+}if(prato == "feijao"){
         tempoPrato = 12
-        tempoUsado = tempoPrato
         console.log("Prato pronto, bom apetite!!!")
 
 }if(prato == "brigadeiro"){
         tempoPrato = 8
-        tempoUsado = tempoPrato
         console.log("Prato pronto, bom apetite!!!")
 }else{
         tempoUsado = tempoCliente
@@ -42,7 +56,7 @@ if(prato == "pipoca"){
 //Condição para o prato queimar
 if(prato == "pipoca" && tempoUsado >= 2 * tempoPrato){
         console.log("A comida queimou!")
-}if(prato == "feijão" && tempoUsado >= 2 * tempoPrato){
+}if(prato == "feijao" && tempoUsado >= 2 * tempoPrato){
         console.log("A comida queimou!")
 }if(prato == "brigadeiro" && tempoUsado >= 2 * tempoPrato){
         console.log("A comida queimou!")
@@ -55,7 +69,7 @@ if(prato == "pipoca" && tempoUsado >= 2 * tempoPrato){
 //Condição para o tempo insuficiente do prato
 if(prato == "pipoca" && tempoUsado < tempoPrato){
         console.log("tempo insuficiente")
-}if(prato == "feijão" && tempoUsado < tempoPrato){
+}if(prato == "feijao" && tempoUsado < tempoPrato){
         console.log("tempo insuficiente")
 }if(prato == "brigadeiro" && tempoUsado < tempoPrato){
         console.log("tempo insuficiente")
@@ -68,7 +82,7 @@ if(prato == "pipoca" && tempoUsado < tempoPrato){
 //Condições para o "Kabummm"
 if(prato == "pipoca" && tempoUsado >= 3 * tempoPrato){
         console.log("Kabummm!!!")
-}if(prato == "feijão" && tempoUsado >= 3 * tempoPrato){
+}if(prato == "feijao" && tempoUsado >= 3 * tempoPrato){
         console.log("Kabummm!!!")
 }if(prato == "brigadeiro" && tempoUsado >= 3 * tempoPrato){
         console.log("Kabummm!!!")
@@ -77,7 +91,6 @@ if(prato == "pipoca" && tempoUsado >= 3 * tempoPrato){
 }if(prato == "carne" && tempoUsado >= 3 * tempoPrato){
         console.log("Kabummm!!!")
 }
-
 
 //Checando valores
 console.log ("Tempo escolhido pelo cliente: ",tempoCliente)
